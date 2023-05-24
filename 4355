@@ -1,0 +1,10 @@
+1. def solution(N, M):
+    gcd = compute_gcd(N, M)
+    return N // gcd
+
+
+def compute_gcd(a, b):
+    if b == 0:
+        return a
+    else:
+        return compute_gcd(b, a % b)
